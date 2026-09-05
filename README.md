@@ -11,4 +11,4 @@ You can view the live portfolio here:
 - **Edge-to-Cloud IoT Framework:** Distributed smart agriculture architecture utilizing Fog computing and AWS Cloud services.
 
 ---
-© 2026 Rema Alsuhaibani. All rights reserved.
+© 2026 Rema Alsuhaibani.
