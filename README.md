@@ -4,7 +4,7 @@ Welcome to my professional portfolio! This website serves as a centralized hub t
 
 ## Live Website
 You can view the live portfolio here:
-👉 **[Visit Portfolio Website](https://remaabdullah.github.io/Portfolio/FloraSense.html)**
+👉 **[Visit Portfolio Website](https://remaabdullah.github.io/Portfolio/index.html)**
 
 ## Featured Projects
 - **FloraSense:** Smart Indoor Plant Monitoring System using Raspberry Pi, Python, and Telegram Bot.
