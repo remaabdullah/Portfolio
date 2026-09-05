@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Smart Agriculture Framework | Rema's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            accent: '#ec4899',
+                            brown: '#78350f',
+                            darkbrown: '#451a03'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-amber-50/40 via-orange-50/30 to-pink-50/30 text-brand-darkbrown font-sans leading-relaxed min-h-screen">
+
+    <!-- Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-orange-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="Portfolio.html#projects" class="text-brand-600 font-semibold hover:text-brand-accent transition flex items-center gap-2 text-sm">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Project Header -->
+    <section class="max-w-3xl mx-auto px-6 pt-16 pb-10 text-center">
+        <span class="bg-orange-100 text-brand-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block tracking-wide">December 2025</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-darkbrown mb-4">
+            Edge-to-Cloud IoT Framework for Smart Agriculture
+        </h1>
+        <p class="text-lg text-brand-brown font-medium">
+            A hybrid framework combining practical Fog computing implementation with a comprehensive AWS Cloud architectural blueprint for smart farming.
+        </p>
+    </section>
+
+    <!-- Project Content (Single Column Layout) -->
+    <section class="max-w-3xl mx-auto px-6 pb-24 space-y-12">
+        
+        <!-- Core Problem -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Core Problem</h2>
+            <p class="text-brand-brown leading-relaxed">
+                Traditional farming systems often react only when soil moisture becomes critical, which fails to optimize water usage and stresses crops. Furthermore, agricultural environments require robust architectures that can prevent data loss during frequent internet outages, minimize cloud bandwidth, and maintain operations autonomously.
+            </p>
+        </div>
+
+        <!-- Solution -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Solution</h2>
+            <p class="text-brand-brown leading-relaxed">
+                This framework presents a hybrid IoT solution that splits responsibilities between physical implementation and cloud system design. On the hardware side, a functional Sensing and Edge layer that connects to a local Fog Node was built for real-time processing and offline data storage. To complete the framework, a detailed, highly scalable AWS Cloud pipeline designed to securely ingest this data and route it for future machine learning analytics was architected.
+            </p>
+        </div>
+
+        <!-- Technologies Used (Bubbles) -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Technologies & Architecture</h2>
+            <div class="flex flex-wrap gap-3 mt-2">
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Fog Computing</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Arduino Edge Devices</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">C++ (Local Analytics)</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">SQLite (Temporary Storage)</span>
+                <span class="bg-pink-100/70 text-pink-800 px-4 py-2 rounded-xl text-sm font-medium">IoT System Design</span>
+                <span class="bg-pink-100/70 text-pink-800 px-4 py-2 rounded-xl text-sm font-medium">AWS Cloud Blueprint</span>
+                <span class="bg-pink-100/70 text-pink-800 px-4 py-2 rounded-xl text-sm font-medium">Predictive ML Strategy</span>
+            </div>
+        </div>
+
+        <!-- Key Features (Bulleted List) -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Key Features</h2>
+            <ul class="list-disc list-inside text-brand-brown space-y-3 leading-relaxed">
+                <li><strong>Hybrid Implementation:</strong> Seamlessly combines deployed local hardware (Edge/Fog) with a meticulously documented Cloud architecture.</li>
+                <li><strong>Resilient Fog Node:</strong> Acts as a local mini-server that aggregates sensor data, executes mid-level automation, and uses SQLite buffering to prevent data loss during network outages.</li>
+                <li><strong>Standardized Data Payloads:</strong> Edge devices format raw sensor readings (Soil, Light, NPK, Temp) into structured JSON payloads, ensuring readiness for future cloud integration.</li>
+                <li><strong>AWS Integration Strategy:</strong> A complete architectural blueprint mapping how the Fog Node will securely communicate with AWS IoT Core via MQTT over TLS.</li>
+                <li><strong>Data Pipeline Design:</strong> A proposed routing system using AWS Rules Engine to direct data to Amazon S3 for storage and IoT Analytics for cleaning.</li>
+            </ul>
+        </div>
+        
+        <!-- System Architecture -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">System Architecture Blueprint</h2>
+            <p class="text-brand-brown leading-relaxed mb-6">
+                The deployed portion of the architecture features edge sensors communicating locally with the Fog Node. The extended design maps the theoretical flow: from the Fog Node, aggregated data is securely transmitted to AWS IoT Core. From this central hub, data is routed to IoT Analytics for processing and SageMaker for predictive modeling.
+            </p>
+            <div class="bg-white p-2 rounded-2xl shadow-sm border border-orange-100 flex justify-center">
+                <img src="SystemArchitectureDiagram.png" alt="System Architecture Diagram" class="w-full max-w-2xl h-auto rounded-xl">
+            </div>
+        </div>
+
+        <!-- Predictive AI Strategy -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Predictive AI Strategy</h2>
+            <p class="text-brand-brown leading-relaxed mb-6">
+                Rather than relying solely on reactive triggers, a comprehensive Machine Learning strategy was designed for future deployment using Amazon SageMaker.
+            </p>
+            <ul class="list-disc list-inside text-brand-brown space-y-3 leading-relaxed">
+                <li><strong>Proposed Algorithm:</strong> XGBoost Regression, chosen for its efficiency in handling nonlinear environmental patterns.</li>
+                <li><strong>Objective:</strong> To calculate optimal irrigation durations 24 hours in advance using historical data, diurnal cycles, and rolling averages.</li>
+                <li><strong>Expected Impact:</strong> The theoretical model aims to achieve up to a 30% reduction in water usage while maintaining stable crop health.</li>
+            </ul>
+        </div>
+
+        <!-- Source Code Link -->
+        <div class="pt-8 border-t border-orange-200 text-center">
+            <div class="bg-brand-darkbrown p-8 rounded-3xl shadow-lg text-brand-50 max-w-lg mx-auto">
+                <h3 class="font-bold text-2xl mb-3">Explore the Architecture & Edge Logic</h3>
+                <p class="text-brand-100 mb-8 leading-relaxed">
+                    Dive into the GitHub repository to view the implemented edge device scripts, structured data payloads, and the comprehensive cloud architecture blueprint.
+                </p>
+                <a href="https://github.com/remaabdullah/Edge-to-Cloud-Agri-IoT" target="_blank" class="inline-block bg-orange-500 text-white font-bold px-8 py-4 rounded-xl hover:bg-orange-600 transition shadow-md shadow-orange-500/20">
+                    View on GitHub &nearr;
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-sm py-6 border-t border-orange-100 text-center text-xs text-brand-brown/70">
+        <p>&copy; 2026 Rema Alsuhaibani.</p>
+    </footer>
+
+</body>
+</html>

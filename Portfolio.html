@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rema's Portfolio | IoT Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            accent: '#ec4899',
+                            brown: '#78350f',
+                            darkbrown: '#451a03'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-amber-50/40 via-orange-50/30 to-pink-50/30 text-brand-darkbrown font-sans leading-relaxed min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-orange-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-bold text-xl text-brand-600 tracking-tight">Rema's Portfolio</span>
+            <div class="flex items-center gap-6">
+                <nav class="space-x-6 text-sm font-medium hidden md:block">
+                    <a href="#about" class="hover:text-brand-accent transition">About</a>
+                    <a href="#projects" class="hover:text-brand-accent transition">Projects</a>
+                    <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-5xl mx-auto px-6 py-20 md:py-28 flex flex-col items-start">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-darkbrown mb-3">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-pink-600">Rema Alsuhaibani</span>.
+        </h1>
+        <p class="text-lg md:text-xl text-brand-brown font-medium max-w-2xl mb-8">
+            IoT Architecture &middot; Embedded Systems &middot; Cybersecurity
+        </p>
+        <div class="flex flex-wrap gap-4 items-center">
+            <a href="#projects" class="bg-gradient-to-r from-brand-600 to-orange-600 text-white font-medium px-6 py-3 rounded-xl shadow-lg shadow-orange-500/20 hover:opacity-95 transition">View Projects</a>
+            <a href="cv.pdf" download class="inline-flex items-center gap-2 bg-pink-600 text-white font-medium px-6 py-3 rounded-xl shadow-lg shadow-pink-500/20 hover:bg-pink-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                Download CV
+            </a>
+            <a href="#contact" class="border-2 border-orange-200 bg-white/50 text-brand-brown font-medium px-6 py-3 rounded-xl hover:bg-orange-50 transition">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section (Includes Bio, Certifications & Skills) -->
+    <section id="about" class="bg-white/60 backdrop-blur-sm py-16 border-y border-orange-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-brand-darkbrown">About Me</h2>
+            
+            <!-- Bio -->
+            <div class="text-brand-brown max-w-3xl leading-relaxed mb-12">
+                <p class="mb-4">An IoT Engineering student bridging the intersection of Electrical Engineering and Information Technology.</p>
+                
+                <div class="w-full h-px bg-orange-100/50 mb-1"></div>
+                <div class="w-full h-px bg-orange-100/50 mb-4"></div>
+
+                <p class="mb-4">Passionate about designing and simulating intelligent connected systems while prioritizing robust cybersecurity measures to safeguard critical architectures.</p>
+                
+                <div class="w-full h-px bg-orange-100/50 mb-1"></div>
+                <div class="w-full h-px bg-orange-100/50 mb-4"></div>
+
+                <p>Driven to transform complex technical concepts into secure, scalable, and real-world digital solutions.</p>
+            </div>
+
+            <!-- Certifications & Skills Container -->
+            <div class="border-t border-orange-100 pt-10">
+                
+                <!-- Certifications Sub-section -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-bold mb-6 text-brand-darkbrown">Professional Certifications</h3>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-orange-100 flex items-start gap-4 max-w-lg">
+                        <div class="p-3 bg-orange-100 text-brand-600 rounded-xl font-bold text-xl">🛡️</div>
+                        <div>
+                            <h4 class="font-bold text-lg text-brand-darkbrown">CompTIA Security+</h4>
+                            <p class="text-sm text-brand-600 font-semibold mb-1">SY0-701</p>
+                            <p class="text-xs text-pink-600 font-semibold mb-2">Issued: August 2026</p>
+                            <p class="text-brand-brown text-sm">Validated core cybersecurity skills, risk management, and secure infrastructure design principles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Sub-section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-brand-darkbrown">Technical Expertise</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Core Skills -->
+                        <div>
+                            <h4 class="text-sm uppercase tracking-wider font-bold mb-4 text-pink-600">Core Skills</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Programming (Java, Python, C++, SQL)</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Circuit Design</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Sensor Integration</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Microcontrollers (Raspberry Pi, Arduino)</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Libraries (NumPy, Pandas, Scikit-learn, Matplotlib)</span>
+                            </div>
+                        </div>
+
+                        <!-- Technical Tools -->
+                        <div>
+                            <h4 class="text-sm uppercase tracking-wider font-bold mb-4 text-pink-600">Technical Tools</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">MATLAB Simulink</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Cisco Packet Tracer</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Wokwi</span>
+                                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Google Colab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-8 text-brand-darkbrown">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- FloraSense Card -->
+            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <h3 class="font-bold text-lg text-brand-darkbrown mb-2">FloraSense: Smart Plant Monitoring System</h3>
+                    <p class="text-brand-brown text-sm mb-6">
+                        An intelligent IoT monitoring system for soil moisture, temperature, and light intensity equipped with edge computing logic for autonomous decision-making.
+                    </p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-4 border-t border-orange-50">
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                        <span class="bg-orange-50 text-brand-600 px-2.5 py-1 rounded-md">Raspberry Pi</span>
+                        <span class="bg-orange-50 text-brand-600 px-2.5 py-1 rounded-md">Python</span>
+                    </div>
+                    <a href="FloraSense.html" class="inline-flex items-center text-sm font-semibold text-pink-600 hover:text-pink-700 transition">
+                        View Details &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Edge-to-Cloud IoT Framework Card -->
+            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-orange-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <h3 class="font-bold text-lg text-brand-darkbrown mb-2">Edge-to-Cloud IoT Framework for Smart Agriculture</h3>
+                    <p class="text-brand-brown text-sm mb-6">
+                        A hybrid framework combining practical Fog computing implementation with a comprehensive AWS Cloud architectural blueprint for smart farming.
+                    </p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-4 border-t border-orange-50">
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                        <span class="bg-orange-50 text-brand-600 px-2.5 py-1 rounded-md">Fog Computing</span>
+                        <span class="bg-orange-50 text-brand-600 px-2.5 py-1 rounded-md">AWS IoT Core</span>
+                    </div>
+                    <a href="EdgeToCloudIoTFramework.html" class="inline-flex items-center text-sm font-semibold text-pink-600 hover:text-pink-700 transition">
+                        View Details &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-brand-darkbrown py-24 text-left">
+        <div class="max-w-5xl mx-auto px-6">
+            <p class="text-pink-400 font-semibold tracking-wider text-sm mb-4 uppercase">Contact Me</p>
+            <h2 class="text-5xl md:text-7xl font-bold mb-4 text-brand-50 tracking-tight">
+                Got a system to build,<br>or an idea to explore?<br>
+                <span class="text-orange-400">Let's connect.</span>
+            </h2>
+            <div class="mt-12 flex flex-wrap items-center gap-4">
+                <a href="mailto:reemaabduullh@gmail.com" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-full hover:bg-orange-600 transition">
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/remaabdullah/" target="_blank" class="border border-orange-500/40 text-brand-100 font-semibold px-8 py-3 rounded-full hover:bg-brand-brown transition">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/remaabdullah" target="_blank" class="border border-orange-500/40 text-brand-100 font-semibold px-8 py-3 rounded-full hover:bg-brand-brown transition">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

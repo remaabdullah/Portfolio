@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloraSense Project | Rema's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            accent: '#ec4899',
+                            brown: '#78350f',
+                            darkbrown: '#451a03'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-amber-50/40 via-orange-50/30 to-pink-50/30 text-brand-darkbrown font-sans leading-relaxed min-h-screen">
+
+    <!-- Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-orange-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center">
+            <a href="Portfolio.html#projects" class="text-brand-600 font-semibold hover:text-brand-accent transition flex items-center gap-2 text-sm">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Project Header -->
+    <section class="max-w-3xl mx-auto px-6 pt-16 pb-10 text-center">
+        <span class="bg-orange-100 text-brand-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block tracking-wide">May 2025</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-darkbrown mb-4">
+            FloraSense: Smart Plant Monitoring System
+        </h1>
+        <p class="text-lg text-brand-brown font-medium">
+            An intelligent IoT monitoring system for soil moisture, temperature, and light intensity equipped with edge computing logic for autonomous decision-making.
+        </p>
+    </section>
+
+    <!-- Project Content (Single Column Layout) -->
+    <section class="max-w-3xl mx-auto px-6 pb-24 space-y-12">
+        
+        <!-- Core Problem -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Core Problem</h2>
+            <p class="text-brand-brown leading-relaxed">
+                Managing a diverse collection of indoor houseplants is frequently challenged by fluctuating room environments, precise humidity requirements, and the difficulty of maintaining consistent care schedules. Traditional plant care generally relies on manual observations and guesswork, which inevitably leads to inconsistent soil moisture and declining health for sensitive plant varieties.
+            </p>
+        </div>
+
+        <!-- Solution -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Solution</h2>
+            <p class="text-brand-brown leading-relaxed">
+                FloraSense was engineered as an IoT-based smart monitoring system that leverages real-time sensor data, automated irrigation, and direct mobile alerts to optimize the health of indoor plants. Acting as the "brain" of the system, a Raspberry Pi 4 processes analog and digital sensor data locally. The system uses threshold-based edge logic to automate physical components, such as triggering a water pump when the soil becomes dry, and communicates with a Telegram bot via WiFi to keep plant owners informed in real time.
+            </p>
+        </div>
+
+        <!-- Technologies Used (Bubbles) -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Technologies Used</h2>
+            <div class="flex flex-wrap gap-3 mt-2">
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Raspberry Pi 4</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Python</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">Telegram Bot API</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">I2C & GPIO Protocols</span>
+                <span class="bg-orange-100/70 text-brand-brown px-4 py-2 rounded-xl text-sm font-medium">PCF8591 ADC</span>
+            </div>
+        </div>
+
+        <!-- Key Features (Bulleted List) -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Key Features</h2>
+            <ul class="list-disc list-inside text-brand-brown space-y-3 leading-relaxed">
+                <li><strong>Real-time Monitoring:</strong> Tracks soil moisture, ambient room temperature, light intensity, and reservoir water levels constantly to ensure optimal indoor plant health.</li>
+                <li><strong>Autonomous Irrigation:</strong> Automatically activates a 5V water pump when soil moisture drops below the 30% threshold, preventing underwatering.</li>
+                <li><strong>Direct Mobile Alerts:</strong> Sends instant push notifications to plant owners via a Telegram Bot if critical conditions are met (e.g., Temperature &ge;35&deg;C, Light &ge;80%, or an empty water tank).</li>
+                <li><strong>Interactive Commands:</strong> Owners can send a <code class="bg-orange-100 px-1 rounded text-sm text-brand-600">/status</code> command to the bot at any time to retrieve a single message containing all current sensor readings.</li>
+                <li><strong>Data Preprocessing:</strong> Implements a moving average filter to reduce electrical noise, alongside mathematical scaling algorithms to convert raw ADC voltages into meaningful percentages.</li>
+            </ul>
+        </div>
+        
+        <!-- Hardware Architecture -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Hardware Architecture</h2>
+            <p class="text-brand-brown leading-relaxed mb-6">
+                The architecture is centralized around a Raspberry Pi 4. Analog sensors (Soil Moisture, Light, and Water Level) transmit data through a PCF8591 ADC using the I2C protocol. Digital components, specifically the DHT22 temperature sensor and the 5V water pump relay, are connected directly to the Raspberry Pi GPIO pins.
+            </p>
+            <div class="bg-white p-2 rounded-2xl shadow-sm border border-orange-100 flex justify-center">
+                <img src="FloraSenseArchitecture.png" alt="FloraSense Hardware Architecture" class="w-full max-w-2xl h-auto rounded-xl">
+            </div>
+        </div>
+
+        <!-- Prototype & Bot Interface -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4 text-brand-darkbrown border-b border-orange-200 pb-2">Prototype & Alerts</h2>
+            <p class="text-brand-brown leading-relaxed mb-6">
+                Physical implementation of the indoor monitoring system showcasing the raw hardware integration, alongside the real-time Telegram bot alerts.
+            </p>
+            <div class="space-y-6">
+                <!-- Physical Prototype (Full Width) -->
+                <div class="bg-white p-2 rounded-2xl shadow-sm border border-orange-100">
+                    <img src="FloraSensePrototype.png" alt="FloraSense Physical Prototype" class="w-full h-auto rounded-xl object-cover">
+                    <p class="text-center text-sm font-medium text-brand-brown/70 mt-3 pb-2">Working hardware setup: Sensor integration & automated pump</p>
+                </div>
+                
+                <!-- Telegram Alerts (Centered with Text) -->
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-orange-100 flex flex-col items-center">
+                    <img src="FloraSenseAlerts.png" alt="Telegram Bot Alerts" class="w-full max-w-sm h-auto rounded-xl shadow-sm">
+                    <p class="text-center text-sm font-medium text-brand-brown/70 mt-4 pb-2">Live notifications and interactive command responses via Telegram</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Source Code Link -->
+        <div class="pt-8 border-t border-orange-200 text-center">
+            <div class="bg-brand-darkbrown p-8 rounded-3xl shadow-lg text-brand-50 max-w-lg mx-auto">
+                <h3 class="font-bold text-2xl mb-3">Explore the Source Code</h3>
+                <p class="text-brand-100 mb-8 leading-relaxed">
+                    View the Python scripts, edge computing logic, and Bot integration on my GitHub repository.
+                </p>
+                <a href="https://github.com/remaabdullah/FloraSense" target="_blank" class="inline-block bg-orange-500 text-white font-bold px-8 py-4 rounded-xl hover:bg-orange-600 transition shadow-md shadow-orange-500/20">
+                    View on GitHub &nearr;
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-sm py-6 border-t border-orange-100 text-center text-xs text-brand-brown/70">
+        <p>&copy; 2026 Rema Alsuhaibani.</p>
+    </footer>
+
+</body>
+</html>
